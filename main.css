@@ -1,38 +1,17 @@
+.nav {
+  padding-top: 10px;
+}
 
 .nav a {
   color: #5a5a5a;
-  font-size: 11px;
+  font-size: 20px;
   font-weight: bold;
-  padding: 14px 10px;
+  padding: 14px 20px;
   text-transform: uppercase;
 }
 
 .nav li {
   display: inline;
-}
-
-.jumbotron {
-  background-image:url(http://img.saraivaconteudo.com.br/Clipart/images/foto2_Floresta_Sherwood_credito_experienceNottinghamShire.jpg);
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.jumbotron .container {
-  position: relative;
-  top:100px;
-}
-
-.jumbotron h1 {
-  color: #fff;
-  font-size: 48px;  
-  font-family: 'Shift', sans-serif;
-  font-weight: bold;
-}
-
-.jumbotron p {
-  font-size: 20px;
-  color: #fff;
 }
 
 .about-me {
@@ -42,12 +21,18 @@
     
 .about-me h2 {
     color: #393c3d;
-    font-size: 24px;
+    font-size: 35px;
+    text-align: center;
 }
 
 .about-me p {
     font-size: 15px;
-    margin-bottom: 13px;
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+.about-me li {
+  color: #fff;
 }
 
 .projects {
