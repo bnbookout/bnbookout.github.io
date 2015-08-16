@@ -1,0 +1,50 @@
+.nav {
+  padding-top: 10px;
+}
+
+.nav a {
+  color: #5a5a5a;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 20px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.about-me {
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+    
+.about-me h2 {
+    color: #393c3d;
+    font-size: 24px;
+    text-align: center;
+}
+
+.about-me p {
+    font-size: 15px;
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+.about-me li {
+  color: #fff;
+}
+
+.projects {
+  background-color: #f7f7f7;
+}
+
+.projects h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.projects a {
+  color: #00b0ff;
+}
