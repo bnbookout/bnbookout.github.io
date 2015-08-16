@@ -17,6 +17,7 @@
 .about-me {
     background-color: #efefef;
     border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
 }
     
 .about-me h2 {
@@ -43,8 +44,13 @@
   font-family: 'Shift', sans-serif;
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 
 .projects a {
   color: #00b0ff;
+}
+
+.projects p {
+  text-align: center;
 }
