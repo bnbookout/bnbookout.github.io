@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro to CS Sample Code</title>  
+  </head>
+  <body>
+    <p>
+    /*
+      File: DNA.java
+    
+      Description: This program imports a file and compares DNA strands for common base sequences.
+    
+      Student Name: Brett N Bookout
+    
+      Student UT EID: bnb263
+    
+      Course Name: CS 312
+    
+      Unique Number: 90125
+    
+      Date Created: 7/24/14
+    
+      Date Last Modified: 7/26/14
+    
+    */
+    
+    import java.util.*;
+    import java.io.*;
+    
+    public class DNA
+    {
+      
+      public static String subStr (String line1, String line2)
+      {
+      	int commSeq = 0;
+      	String check = "";
+      	int a = line1.length();
+        int b = line2.length();
+        String greater = "";
+        String lesser = "";
+        String common = "";
+        String combine = "";
+    
+        //check which string is longer and assign to variables
+        if (a > b)
+        {
+          commSeq = line2.length();
+          greater = line1;
+          lesser = line2;
+        }
+        else
+        {
+          commSeq = line1.length();
+          greater = line2;
+          lesser = line1;
+        }
+    
+    
+        //nested while loops to chop up small string and compare segments to larger string for common sequences
+      	while (commSeq > 0)
+      	{
+      	  int index = 0;
+    
+      	  while ((index + commSeq) <= lesser.length())
+      	  {
+     		
+      	  	check = lesser.substring(index, index + commSeq);
+      	  	index++;
+    
+      	  	if (greater.contains(check))
+      	  	{
+      	  	  if (check.length() >= common.length())
+      	  	  {
+      	  	  common = check;
+      	  	  combine = combine + common + "\n        ";
+      	  	  } 
+      	    }
+      	  }  
+      	  commSeq--;
+      	}
+     	
+     	//if no common sequences are found print that none were found
+     	if (combine == "")
+     	{
+     	  combine = "No Common Sequence Found\n";
+     	}
+    
+      	return combine;
+      } 
+    
+      public static void main (String[] args) throws IOException
+      {
+      	File inFile = new File("dna.txt"); //import file
+      	Scanner input = new Scanner(inFile); //scanner object scans file
+    
+      	System.out.println("Longest Common Sequences\n");
+    
+      	int firstLine = 0;
+      	String answer = "";
+      	String line = "";
+      	String line1 = "";
+      	String line2 = "";
+      	int numPairs = 1;
+    
+      	line = input.nextLine().toUpperCase(); //saving first line to a variable - line
+        firstLine = Integer.parseInt(line); //taking number of pairs in line 1 and making an int
+    
+        while (firstLine > 0) //while loop to read 2 lines at a time and pass to subStr method
+        {
+          line1 = input.nextLine().toUpperCase();
+          line2 = input.nextLine().toUpperCase();
+    
+          //print results
+          System.out.println("Pair " + numPairs + ": " + subStr(line1, line2));
+    
+          firstLine--;
+          numPairs++;
+        } 
+      }
+    }
+    </p>
+  </body>
+</html>
