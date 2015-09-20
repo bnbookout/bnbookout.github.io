@@ -35,6 +35,9 @@
 .about-me li {
   color: #fff;
 }
+.about-me a {
+  text-align: center;
+}
 
 .projects {
   background-color: #f7f7f7;
